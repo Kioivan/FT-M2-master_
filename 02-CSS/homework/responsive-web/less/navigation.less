@@ -1,0 +1,38 @@
+// Código de Nav acá
+@import "variables";
+@import "mixins";
+
+.titulo {                             // con la etiqueta h2 se establece el tamaño del titulo          
+                                // Con esto se esta creando en diseño del titulo (centrado y tamaño)         
+                                // El titulo, propiamente dicho, se coloco en index.html dentro de body con este formato <h2>Musica 8D</h2>
+
+    .flex(row, nowrap, center,flex-start);
+    background-color: @nav-bg;
+    padding-top: 2%;
+
+}
+
+nav{
+    &:extend(.titulo);             // EL NAV SE CONFIGURO DENTRO DE BODY EN INDEX.HTML CON FORMATO 
+                                   //    <nav> <ul>
+                                    //       <li><a>Inicio</a></li>     
+                                     //       <li><a>Sobre Nosotros</a></li>
+                                    //       <li><a>Blog</a></li>
+    padding-bottom: 1%;                      //       <li><a>Contacto</a></li>
+                                            //       <li><a>Registrate</a></li>
+                                            //        </ul>
+                                            //      </nav>
+    ul{
+        .flex(row, nowrap, space-between,flex-start);
+        width: 30%;
+        li{
+            a{
+                font-size: 15px;
+                color: @nav-font;
+            }
+
+        }
+
+
+    }
+}
